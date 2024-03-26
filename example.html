@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="./DoubleScroll.js" type="text/javascript"></script>
+    <style>
+        table{
+            table-layout: fixed;
+        }
+        td{
+            min-width: 100px;
+        }
+        
+        #dbl-main{
+            overflow: auto; 
+        }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div id="dbl-scroller"></div>
+      <div
+        id="dbl-main"
+      >
+        <table>
+          <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>y</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        init()
+    });
+  
+    function init(){
+      const ds = new DoubleScroll("#dbl-main", "#dbl-scroller")
+      ds.start()
+    }
+  </script>
+</html>
