@@ -1,4 +1,4 @@
-class doubleScroll {
+class DoubleScroll {
     constructor(mainElementId, scrollerElementId) {
         this.mainElement = document.querySelector(mainElementId);
 
