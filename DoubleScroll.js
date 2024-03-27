@@ -1,8 +1,12 @@
 class DoubleScroll {
-    constructor(mainElementId, scrollerElementId) {
+    constructor(mainElementId) {
         this.mainElement = document.querySelector(mainElementId);
 
-        this.scrollWrapper = document.querySelector(scrollerElementId);
+        const mainParent = this.mainElement.parentNode
+
+        this.scrollWrapper = document.createElement("div");
+
+        mainParent.insertBefore(this.scrollWrapper, this.mainElement);
 
         // this.scrollWrapper = document.createElement("div");
         this.scrollWrapper.style['overflow-x'] = "scroll";
